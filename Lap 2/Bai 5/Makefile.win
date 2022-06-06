@@ -1,0 +1,28 @@
+# Project: Lap 2 bai 5
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "La\ 2\ bai\ 05.o"
+LINKOBJ  = "La 2 bai 05.o"
+LIBS     = -L"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/lib" -L"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/include" -I"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/include" -I"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/IT FPT/SEM1/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Lap 2 bai 5.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"La\ 2\ bai\ 05.o": La\ 2\ bai\ 05.c
+	$(CC) -c "La 2 bai 05.c" -o "La 2 bai 05.o" $(CFLAGS)
